@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/foway0/labofolio-web-bff/grpc_spec";
+option go_package = "github.com/foway0/labofolio-web-bff/grpc_specs";
 package hello;
 
 service Greeter {

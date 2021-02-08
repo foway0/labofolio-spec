@@ -50,3 +50,8 @@ components:
   parameters:
     articleIdPathParams:
       $ref: './components/parameters.yaml#/articleIdPathParams'
+  securitySchemes:
+    auth:
+      type: apiKey
+      name: x-authorization
+      in: header

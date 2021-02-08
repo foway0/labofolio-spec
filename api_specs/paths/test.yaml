@@ -6,6 +6,8 @@ test:
       grpc client test
     x-eov-operation-id: test
     x-eov-operation-handler: test
+    security:
+      - auth: []
     responses:
       '200':
         description: OK
