@@ -1,0 +1,32 @@
+articles:
+  get:
+    tags:
+      - articles
+    description: |
+      articles list
+    x-eov-operation-id: list
+    x-eov-operation-handler: articles
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/articles'
+article:
+  get:
+    tags:
+      - articles
+    description: |
+      get article details
+    x-eov-operation-id: one
+    x-eov-operation-handler: articles
+    parameters:
+      - $ref: '#/components/parameters/articleIdPathParams'
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/article'

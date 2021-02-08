@@ -1,0 +1,15 @@
+categories:
+  get:
+    tags:
+      - categories
+    description: |
+      categories list
+    x-eov-operation-id: list
+    x-eov-operation-handler: categories
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/categories'

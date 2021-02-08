@@ -1,0 +1,19 @@
+categories:
+  type: array
+  items:
+    $ref: '#/components/schemas/category'
+category:
+  type: object
+  properties:
+    id:
+      type: integer
+      format: int64
+      readOnly: true
+    name:
+      type: string
+    description:
+      type: string
+  required:
+    - id
+    - name
+    - description

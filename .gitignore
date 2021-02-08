@@ -1,5 +1,5 @@
 # node
 node_modules
 
-# grpc generated files
+# grpc & oas generated files
 output

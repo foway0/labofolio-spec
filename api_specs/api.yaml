@@ -1,0 +1,52 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: labofolio api
+  license:
+    name: MIT
+
+servers:
+  - url: https://local-api.labofolio.com
+
+tags:
+  - name: system
+    description: system relation api
+  - name: articles
+    description: blog articles api
+  - name: categories
+    description: blog categories api
+
+paths:
+  ## system 監視
+  /ping:
+    $ref: './paths/ping.yaml#/ping'
+
+  ## 繋ぎ込みtest用
+  /test:
+    $ref: './paths/test.yaml#/test'
+
+  ## articles
+  /articles:
+    $ref: './paths/articles.yaml#/articles'
+  /articles/{article_id}:
+    $ref: './paths/articles.yaml#/article'
+
+  ## categories
+  /categories:
+    $ref: './paths/categories.yaml#/categories'
+
+components:
+  schemas:
+    categories:
+      $ref: './components/categories.yaml#/categories'
+    category:
+      $ref: './components/categories.yaml#/category'
+    articles:
+      $ref: './components/articles.yaml#/articles'
+    article:
+      $ref: './components/articles.yaml#/article'
+    comment:
+      $ref: './components/articles.yaml#/comment'
+  parameters:
+    articleIdPathParams:
+      $ref: './components/parameters.yaml#/articleIdPathParams'
