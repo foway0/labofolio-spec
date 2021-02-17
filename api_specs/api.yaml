@@ -45,11 +45,11 @@ components:
       $ref: './components/articles.yaml#/articles'
     article:
       $ref: './components/articles.yaml#/article'
-    comment:
-      $ref: './components/articles.yaml#/comment'
   parameters:
     articleIdPathParams:
-      $ref: './components/parameters.yaml#/articleIdPathParams'
+      $ref: './components/common.yaml#/parameters/articleIdPathParams'
+    nameQueryParams:
+      $ref: './components/common.yaml#/parameters/nameQueryParams'
   securitySchemes:
     auth:
       type: apiKey

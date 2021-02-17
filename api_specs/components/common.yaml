@@ -1,0 +1,13 @@
+parameters:
+  articleIdPathParams:
+    in: path
+    name: article_id
+    schema:
+      type: integer
+    required: true
+  nameQueryParams:
+    in: query
+    name: name
+    schema:
+      type: string
+    required: false

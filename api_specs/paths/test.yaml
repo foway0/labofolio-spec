@@ -8,6 +8,8 @@ test:
     x-eov-operation-handler: test
     security:
       - auth: []
+    parameters:
+      - $ref: '#/components/parameters/nameQueryParams'
     responses:
       '200':
         description: OK

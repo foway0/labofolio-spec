@@ -1,6 +1,0 @@
-articleIdPathParams:
-  in: path
-  name: article_id
-  schema:
-    type: number
-  required: true
