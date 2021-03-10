@@ -3,7 +3,8 @@
 INPUT_DIR="./proto"
 OUTPUT_DIR_NODE="./output/node"
 OUTPUT_DIR_GO="./output/go"
-OUTPUT_FILE_OAS="./output/result.yaml"
+OUTPUT_WEB_BFF_OAS="./output/web-bff.yaml"
+OUTPUT_ADMIN_BFF_OAS="./output/admin-bff.yaml"
 PLUGIN_GRPC="./node_modules/.bin/grpc_tools_node_protoc_plugin"
 PLUGIN_TS="./node_modules/.bin/protoc-gen-ts"
 GO_OPT="github.com/foway0/labofolio-web-bff/grpc_spec"
@@ -39,7 +40,12 @@ then
   cp -R "${OUTPUT_DIR_GO}/" "${API_REPOS}"
 fi
 
-if [ -n "${OAS_REPOS}" ]
+if [ -n "${WEB_BFF_OAS_REPOS}" ]
 then
-  cp -R "${OUTPUT_FILE_OAS}" "${OAS_REPOS}"
+  cp -R "${OUTPUT_WEB_BFF_OAS}" "${WEB_BFF_OAS_REPOS}"
+fi
+
+if [ -n "${ADMIN_BFF_OAS_REPOS}" ]
+then
+  cp -R "${OUTPUT_ADMIN_BFF_OAS}" "${ADMIN_BFF_OAS_REPOS}"
 fi
